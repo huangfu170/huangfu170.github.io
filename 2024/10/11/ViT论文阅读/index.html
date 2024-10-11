@@ -33,7 +33,7 @@
 <blockquote>
 <p>An Image is Worth 16X16 Words: Transformers for Image Recognition at Scale, ICLR’21</p>
 </blockquote>
-<p><img src="/./figure.jpeg"></p>
+<p><img src="figure.jpeg"></p>
 <h1 id="1-怎么把图片变成NLP里的Embedding"><a href="#1-怎么把图片变成NLP里的Embedding" class="headerlink" title="1.怎么把图片变成NLP里的Embedding"></a>1.怎么把图片变成NLP里的Embedding</h1><p>首先将一张图切成16<em>16(patch size)的小块（称之为patch），每个patch对应的是NLP里的一个token，一张图片就像是一个句子按行排列一样，然后通过某种变换，让他们从16</em>16<em>3(rgb channels)转换成768，原版的比较朴素，直接一个线性变换，从16</em>16*3拉到768</p>
 <p>这里不同的系统有不同的实现</p>
 <p>在vit_pytorch里实现的ViT，使用的是原版线性变换</p>
